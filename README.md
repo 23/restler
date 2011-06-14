@@ -18,6 +18,7 @@ Features
 * Send files with multipart requests
 * Transparently handle SSL (just specify https in the URL)
 * Deals with basic auth for you, just provide username and password options
+* Signs OAuth 1.0 requests given necessary signature credentials
 * Simple service wrapper that allows you to easily put together REST API libraries
     
     
@@ -134,6 +135,20 @@ Example usage
     client.update('Tweeting using a Restler service thingy').on('complete', function(data) {
       sys.p(data);
     });
+    
+    // Sign requests with OAuth 1.0
+    rest.get(
+        'http://reinvent.23video.com/api/echo?raw=1&format=json&something=nothing',
+        {oauthConsumerKey:"---a key---",
+         oauthConsumerSecret:"---a secret---",
+         oauthAccessToken:'---another key---', 
+         oauthAccessTokenSecret:'---and a final secret---'
+        }
+    ).on('complete', function(data) {
+        sys.puts(data);
+        sys.puts(JSON.parse(data).status);
+    });
+
 
     
 Running the tests
