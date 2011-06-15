@@ -113,7 +113,7 @@ Example usage
       password: 'wouldntyouliketoknow',
       data: {
         'sound[message]': 'hello from restler!',
-        'sound[file]': rest.file('doug-e-fresh_the-show.mp3', 'audio/mpeg')
+        'sound[file]': rest.file('/path/to/doug-e-fresh_the-show.mp3', 'doug-e-fresh_the-show.mp3')
       }
     }).on('complete', function(data) {
       sys.puts(data.audio_url);
