@@ -78,6 +78,8 @@ All of these attempt to turn the response into a JavaScript object. In order to 
 * _multipart_ If set the data passed will be formated as multipart/form-encoded.  See multipart example below.
 * _client_ A http.Client instance if you want to reuse or implement some kind of connection pooling.
 * _followRedirects_ Does what it says on the tin.
+* _suppressChunkedTransfer_ Suppressed `Transfer-Encoding: chunked` on multipart requests.
+* _oauthConsumerKey_ / _oauthConsumerSecret_ / _oauthAccessToken_ / _oauthAccessTokenSecret_ Credentials to OAuth 1.0 sign requests.
 
 
 Example usage
