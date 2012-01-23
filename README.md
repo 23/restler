@@ -140,7 +140,7 @@ Example usage
     
     // Sign requests with OAuth 1.0
     rest.get(
-        'http://reinvent.23video.com/api/echo?raw=1&format=json&something=nothing',
+        'http://www.domain.com/api/method?raw=1&format=json&something=nothing',
         {oauthConsumerKey:"---a key---",
          oauthConsumerSecret:"---a secret---",
          oauthAccessToken:'---another key---', 
